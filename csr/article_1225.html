@@ -78,21 +78,29 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- FB ROOT END -->
-	<header>
-		<!-- 漢堡 -->
-		<div class="nav"><button class="hamburger hamburger-cancel"><span class="icon"></span></button></div>
-		<!-- 漢堡end -->
-		<div class="logo"><a href="index.html"><img src="assets/images/LOGO.svg" alt="CSR@天下"></a></div>
-		<div class="testlink">
+	<header id="header">
+	    <div class="nav" v-bind:class="{index:is_index_page}">
+	        <button class="hamburger hamburger-cancel">
+	            <span class="icon"></span>
+	        </button>
+	    </div>
+	    <div class="logo">
+	        <a href="https://csr.cw.com.tw">
+	            <img src="assets/images/LOGO.svg" align="CSR@天下">
+	        </a>
+	    </div>
+	    <div class="testlink">
 			<p>熱門主題<a href="https://csr.cw.com.tw/special/21">聖誕節</a></p>
 		</div>
-		<div class="search">
-			<form class="page-search" id="search" method="get">
-                <input type="text" name="key" id="search-input" placeholder="請輸入關鍵字">
-                <button type="button" class="search-btn" id="dosearch"></button>
-            </form>
-            <i></i>
-		</div>
+	    <div class="search">
+	        <form class="page-search" id="search" method="get" action="https://csr.cw.com.tw/search/doSearch.action">
+	            <input type="text" name="keyword" id="pagr-search-input" placeholder="請輸入關鍵字">
+	            <input type="hidden" name="channel" value="0">
+	            <input type="hidden" name="sort" value="">
+	            <button type="submit" class="search-btn" id="dosearch"></button>
+	        </form>
+	        <i></i>
+	    </div>
 	</header>
 	<style type="text/css">
 		.testlink { display: none; }
